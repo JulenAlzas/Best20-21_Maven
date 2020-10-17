@@ -26,6 +26,8 @@ import java.awt.event.ActionEvent;
 
 public class UserGUI extends JFrame {
 
+	private static final String TAHOMA = "Tahoma";
+
 	private static final String MAIN_TITLE = "MainTitle";
 
 	private static final long serialVersionUID = 1L;
@@ -147,7 +149,7 @@ public class UserGUI extends JFrame {
 			final JLabel erab = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("Erabiltzaile")); //$NON-NLS-1$ //$NON-NLS-2$
 			erab.setText(qry.getKorreoa());
 			panel_1.add(erab);
-			erab.setFont(new Font("Tahoma", Font.PLAIN, 12));
+			erab.setFont(new Font(TAHOMA, Font.PLAIN, 12));
 			
 
 			final JPanel panel_2 = new JPanel();
@@ -156,7 +158,7 @@ public class UserGUI extends JFrame {
 
 			final JLabel money = diruaLortu(qry);
 			panel_2.add(money);
-			money.setFont(new Font("Tahoma", Font.PLAIN, 12));
+			money.setFont(new Font(TAHOMA, Font.PLAIN, 12));
 			
 			
 			diruasartu = new JButton();
@@ -231,7 +233,7 @@ public class UserGUI extends JFrame {
 					panel_2.removeAll();
 					JLabel money = diruaLortu(qry);
 					panel_2.add(money);
-					money.setFont(new Font("Tahoma", Font.PLAIN, 12));
+					money.setFont(new Font(TAHOMA, Font.PLAIN, 12));
 				}
 			});
 			btnEguneratuDirua.setBounds(353, 33, 159, 23); 
@@ -281,7 +283,7 @@ public class UserGUI extends JFrame {
 			panel_1.setBounds(228, 10, 100, 23);
 			final JLabel erab = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("UserGUI.lblNewLabel.text")); //$NON-NLS-1$ //$NON-NLS-2$
 			panel_1.add(erab);
-			erab.setFont(new Font("Tahoma", Font.PLAIN, 12));
+			erab.setFont(new Font(TAHOMA, Font.PLAIN, 12));
 
 			JPanel panel_2 = new JPanel();
 			panel_2.setBounds(413, 10, 99, 23);
@@ -289,7 +291,7 @@ public class UserGUI extends JFrame {
 
 			JLabel money = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("UserGUI.money.text")); //$NON-NLS-1$ //$NON-NLS-2$
 			panel_2.add(money);
-			money.setFont(new Font("Tahoma", Font.PLAIN, 12));
+			money.setFont(new Font(TAHOMA, Font.PLAIN, 12));
 			panel_2.add(getEuro());
 
 			JButton diruasartu = new JButton();
@@ -382,7 +384,7 @@ public class UserGUI extends JFrame {
 		if (jLabelSelectOption == null) {
 			jLabelSelectOption = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("SelectOption"));
 			jLabelSelectOption.setBounds(0, 10, 140, 23);
-			jLabelSelectOption.setFont(new Font("Tahoma", Font.BOLD, 13));
+			jLabelSelectOption.setFont(new Font(TAHOMA, Font.BOLD, 13));
 			jLabelSelectOption.setForeground(Color.BLACK);
 			jLabelSelectOption.setHorizontalAlignment(SwingConstants.CENTER);
 		}
@@ -457,7 +459,7 @@ public class UserGUI extends JFrame {
 	private JLabel getEuro() {
 		if (euro == null) {
 			euro = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("UserGUI.label.text_1")); //$NON-NLS-1$ //$NON-NLS-2$
-			euro.setFont(new Font("Tahoma", Font.PLAIN, 12));
+			euro.setFont(new Font(TAHOMA, Font.PLAIN, 12));
 		}
 		return euro;
 	}
