@@ -31,12 +31,13 @@ import gui.UserGUI;
  */
 @WebService(endpointInterface = "businessLogic.BLFacade")
 public class BLFacadeImplementation  implements BLFacade {
+	private static final String INITIALIZE = "initialize";
 	DataAccess dbManager;
 
 	public BLFacadeImplementation(DataAccess da) {
 		System.out.println("Creating BLFacadeImplementation instance with DataAccess parameter");
 		ConfigXML c=ConfigXML.getInstance();
-		if (c.getDataBaseOpenMode().equals("initialize")) {
+		if (c.getDataBaseOpenMode().equals(INITIALIZE)) {
 			da.open(true);
 			da.initializeDB();
 			da.close();
@@ -49,8 +50,8 @@ public class BLFacadeImplementation  implements BLFacade {
 		ConfigXML c=ConfigXML.getInstance();
 
 
-		if (c.getDataBaseOpenMode().equals("initialize")) {
-			DataAccess dbManager=new DataAccess(c.getDataBaseOpenMode().equals("initialize"));
+		if (c.getDataBaseOpenMode().equals(INITIALIZE)) {
+			DataAccess dbManager=new DataAccess(c.getDataBaseOpenMode().equals(INITIALIZE));
 			dbManager.initializeDB();
 			dbManager.close();
 		}
