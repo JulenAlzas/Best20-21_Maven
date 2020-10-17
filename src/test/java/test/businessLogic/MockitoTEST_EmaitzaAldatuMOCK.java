@@ -1,4 +1,4 @@
-package test_Facade;
+package test.businessLogic;
 
 import static org.junit.Assert.assertTrue;
 

@@ -1,4 +1,4 @@
-package test_dataaccess;
+package test.dataAccess;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
